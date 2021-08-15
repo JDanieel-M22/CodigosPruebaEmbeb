@@ -10,9 +10,14 @@ from time import sleep
 # Initializes virtual board (comment out for hardware deploy)
 import virtualboard
 
-# Disable warnings
-# GPIO.setwarnings(False)
 # Set up Rpi.GPIO library to use physical pin numbers
 GPIO.setmode(GPIO.BOARD)
-# Configuración de pines inicializados en LOW
+# Set up pin no. 32 as output and default it to low
 GPIO.setup(32, GPIO.OUT, initial=GPIO.LOW)
+
+# Blink the led
+while True: # Forever
+	sleep(0.5)                 # Wait 500ms
+	GPIO.output(32, GPIO.HIGH) # Turn led on
+	sleep(0.5)                 # Espera 500ms
+	GPIO.output(32, GPIO.LOW)  # Turn led off
