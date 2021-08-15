@@ -5,7 +5,7 @@ from time import sleep
 GPIO.setmode(GPIO.BCM)
 
 M_In1 = 15
-M_IN2 = 14
+M_In2 = 14
 M_Enable = 18
 
 GPIO.setup(M_In1,GPIO.OUT)
